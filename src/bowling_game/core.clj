@@ -1,5 +1,4 @@
-(ns bowling-game.core
-  (:require [clojure.tools.trace :as t]))
+(ns bowling-game.core)
 
 (defn new-game []
   [])
@@ -21,7 +20,7 @@
 (defn frameseq [game]
   (lazy-seq
    (let [frame (take 2 game)]
-     (cons (take (number-of-rolls-in-frame)
+     (cons (take (number-of-rolls-in-frame frame)
                  game)
           (frameseq (drop 2 game))))))
 

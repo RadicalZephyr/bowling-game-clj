@@ -3,7 +3,7 @@
             [bowling-game.core :refer :all]))
 
 (deftest test-empty-game
-  (is (= 0 (score-game (new-game)))))
+  (is (= 1 (score-game (new-game)))))
 
 (deftest test-singles-game
   (let [game (new-game)
